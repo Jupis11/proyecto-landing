@@ -1,0 +1,376 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Unete a nosotros',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '/src/assets/images/acueducto-1.svg', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+       <span class="hidden xl:inline"></span>
+      <span class="text-accent dark:text-white highlight"> Sisgeram </span> Unete
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold"></span> "Optimiza la gestión financiera de tu acueducto de manera eficiente y sin complicaciones con nuestro software de facturación y recaudo. Simplifica la creación de facturas, realiza un seguimiento preciso de los pagos y mantén un flujo de ingresos saludable. Convierte la administración de tu sistema de suministro de agua en una tarea ágil y efectiva gracias a nuestra solución intuitiva y poderosa."</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+       
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    
+    title= "Caracteristicas"
+    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    items={[
+      {
+        title: 'Generacion automatica de facturas',
+        description:
+          'El software permite la creación automática de facturas para cada usuario, basándose en su consumo de agua y las tarifas establecidas.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Seguimiento de Pagos',
+        description:
+          'Registro de los pagos recibidos, indicando cuándo se realizó el pago y si hubo algún retraso.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Registro de Usuarios',
+        description:
+          'Base de datos donde se puedan registrar los datos de los usuarios del acueducto, incluyendo su información de contacto y detalles de facturación',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Tarifas Personalizadas',
+        description:
+          'Permite la configuración de diferentes tarifas según la categoría del usuario',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Notificaciones automatizadas',
+        description:
+          "Envia notificaciones automáticas a los usuarios sobre la fecha de vencimiento de sus facturas o cualquier otro aviso relevante.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Reportes Financieros',
+        description:
+          'Genera informes financieros que ayuden a la administración del acueducto a tener una visión clara de sus finanzas.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+   
+    title="¿Por que unirte a nosotros?"
+    items={[
+      {
+        title: 'Eficiencia Operativa',
+        description:
+          'Simplifica y automatiza las tareas de facturación y recaudo, reduciendo la carga de trabajo manual y la posibilidad de errores.',
+      },
+      {
+        title: 'Ahorro de Tiempo',
+        description:
+          'Permite realizar procesos que antes llevaban mucho tiempo de manera rápida y precisa, liberando tiempo para otras actividades esenciales.',
+      },
+      {
+        title: 'Mayor Precisión',
+        description:
+          'Reduce los errores de cálculo en las facturas, lo que evita disputas y problemas con los clientes',
+      },
+    ]}
+    image={{
+      src: 'https://i.pinimg.com/564x/19/c2/ae/19c2ae9539d0cd874e6961ba2a3b61ec.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"></h3>
+
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Gestión de Pagos Mejorada',
+        description: `Facilita el seguimiento de los pagos y la identificación de cuentas morosas, lo que mejora la gestión de cobranzas.`,
+      },
+      {
+        title: 'Información en Tiempo Real',
+        description:
+          'Proporciona acceso instantáneo a datos financieros y de facturación actualizados, lo que facilita la toma de decisiones.',
+      },
+      {
+        title: 'Aumento de Ingresos',
+        description:
+          "Ayuda a garantizar que todos los usuarios paguen de manera oportuna, lo que aumenta los ingresos del acueducto.",
+      },
+      {
+        title: 'Reducción de Deudas Pendientes',
+        description:
+          'Facilita la gestión de deudas y la creación de planes de pago, lo que disminuye la cantidad de cuentas morosas.',
+      },
+    ]}
+    image={{
+      src: 'https://i.pinimg.com/564x/27/21/f3/2721f3846dcb2f0fa5d8fe2a2df70d3f.jpg',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content"></Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Mejora en la Satisfacción del Cliente:',
+        description:
+          'Proporciona a los usuarios información clara y detallada sobre sus facturas, lo que mejora su experiencia.',
+      },
+      {
+        title: 'Reducción de Costos',
+        description:
+          'Al automatizar procesos, se reduce la necesidad de empleados para tareas manuales repetitivas.',
+      },
+      {
+        title: 'Seguridad de Datos',
+        description:
+          'Protege la información financiera y personal de los usuarios, cumpliendo con los estándares de seguridad.',
+      },
+      {
+        title: 'Facilita la Auditoría',
+        description: `Mantiene registros detallados y precisos de todas las transacciones, lo que facilita las auditorías internas y externas.`,
+      },
+    ]}
+    image={{
+      src: 'https://i.pinimg.com/736x/06/6d/a4/066da4f70df7512c0786b0e1cce0e3bb.jpg',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content"></Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Transformemos Juntos el Futuro del Agua: ¡Contáctanos Hoy!"
+    items={[
+      {
+        
+        description:
+          "En SISGERAM, creemos que el acceso al agua limpia y segura es un derecho fundamental. Nos enorgullece ofrecer soluciones innovadoras para acueductos que no solo optimizan la gestión del agua, sino que también mejoran la vida de las comunidades que servimos.",
+        icon: 'tabler:package',
+      },
+      {
+        
+        description:
+          "agua es vida, y estamos aquí para garantizar que cada gota cuente. ¿Estás buscando formas de hacer que la gestión de tu acueducto sea más eficiente, sostenible y confiable? ¡Nosotros también!",
+        icon: 'tabler:letter-case',
+      },
+
+      {
+        title: ' ¿Estas listo?',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://i.pinimg.com/564x/8d/d3/69/8dd369caffa7fa0f11a5c207b419cd29.jpg',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="TESTIMONIOS"
+    subtitle=""
+    tagline=""
+    items={[
+      {
+        title: 'Headers',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+ 
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactanos',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      SISGERAM <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      
+    </Fragment>
+  </CallToAction>
+</Layout>
